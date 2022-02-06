@@ -35,7 +35,7 @@ body {
     color: $soft-blue;
   }
 
-  h3 {
+  h1 {
     font-weight: 600;
     color: $white;
     font-size: 1.3rem;
@@ -95,10 +95,6 @@ body {
     margin-right: 12px;
   }
 
-  hr {
-    color: $line;
-  }
-
   &__infos {
     display: flex;
     justify-content: space-between;
@@ -120,14 +116,16 @@ body {
   &__credits {
     &--p {
       color: $soft-blue;
+      border-top: 2px solid $line;
+      padding-top: 20px;
     }
 
-    &--span {
+    &--author {
       color: $white;
     }
   }
 
-  &__credits--span:hover,
+  &__credits--author:hover,
   &--title:hover {
     color: $cyan;
     cursor: pointer;
