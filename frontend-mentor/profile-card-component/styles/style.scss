@@ -1,0 +1,110 @@
+// Imports
+@import "https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap";
+
+// Variables
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+// CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: no-repeat url(../images/bg-pattern-top.svg),
+    no-repeat url(../images/bg-pattern-bottom.svg);
+  background-color: $dark-cyan;
+  background-position: top -480px left -250px, top 400px right -400px;
+  background-size: 60%, 75%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+}
+
+.card {
+  background-color: #fff;
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: $very-dark-desaturated-blue;
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 70px;
+
+    > span {
+      color: $dark-grayish-blue;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+  }
+
+  &--head-img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    width: 100%;
+  }
+
+  .title--city {
+    color: $dark-grayish-blue;
+    padding-top: .45rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid linen;
+    font-size: 14px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  &__stats {
+    padding: 1.8rem;
+
+    .stats--title {
+      color: $very-dark-desaturated-blue;
+      font-weight: 700;
+
+      > li:nth-child(2) {
+        margin-left: 4px;
+      }
+    }
+
+    .stats--stats {
+      color: $dark-grayish-blue;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      line-height: 1.7;
+      gap: .8rem;
+
+      > li:nth-child(2) {
+        margin-right: 6px;
+      }
+
+      > li:nth-child(3) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &--avatar {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid white;
+    left: 50%;
+    transform: translate(-50%, 70%);
+  }
+}
