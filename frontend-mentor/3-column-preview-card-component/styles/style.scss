@@ -1,0 +1,110 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+// Variables
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+// CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+.card {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  overflow: auto;
+  max-width: 920px;
+
+  h1 {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $transparent-white;
+    line-height: 1.6;
+  }
+
+  &--sedans,
+  &--suvs,
+  &--luxury {
+    padding: 3rem;
+  }
+
+  img,
+  h1 {
+    padding-bottom: 2rem;
+  }
+
+  p {
+    padding-bottom: 6rem;
+  }
+
+  &--sedans {
+    background-color: $bright-orange;
+  }
+  &--suvs {
+    background-color: $dark-cyan;
+  }
+  &--luxury {
+    background-color: $very-dark-cyan;
+  }
+
+  .btn {
+    background-color: white;
+    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 3px solid white;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: none;
+      color: white;
+    }
+
+    &--sedans {
+      color: $bright-orange;
+    }
+    &--suvs {
+      color: $dark-cyan;
+    }
+    &--luxury {
+      color: $very-dark-cyan;
+    }
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .card {
+    display: block;
+    max-width: unset;
+
+    p {
+      padding-bottom: 3rem;
+    }
+  }
+}
