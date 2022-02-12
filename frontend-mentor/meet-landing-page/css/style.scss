@@ -20,10 +20,13 @@ $white: #fafafa;
 }
 
 // CSS
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: "Red Hat Display", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
+  line-height: 1.444rem;
   font-weight: 500;
   background-color: $white;
   display: flex;
@@ -33,14 +36,14 @@ body {
 }
 
 h1 {
-  font-size: 3.5em;
-  line-height: 1em;
+  font-size: 3.556rem;
+  line-height: 3.556rem;
   color: $dark;
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 2.222rem;
+  line-height: 2.444rem;
 }
 
 h1,
@@ -54,12 +57,12 @@ h2,
 .btn,
 .text--overline,
 .section--number {
-  line-height: 26px;
+  line-height: 1.444rem;
 }
 
 .logo {
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding-top: 4.444rem;
+  padding-bottom: 3.333rem;
 }
 
 .section--number {
@@ -68,18 +71,18 @@ h2,
   justify-content: center;
   align-items: center;
   margin: auto;
-  font-size: 0.8em;
+  font-size: 0.889rem;
   color: $light;
   background: $white;
   border: 1px solid rgba(135, 135, 157, 0.25);
   border-radius: 29px;
-  width: 56px;
-  height: 56px;
+  width: 3.111rem;
+  height: 3.111rem;
 
   &::before {
     content: "";
     width: 1px;
-    height: 84px;
+    height: 4.667rem;
     background-color: rgba(135, 135, 157, 0.25);
     position: absolute;
     top: -85px;
@@ -103,8 +106,8 @@ h2,
   color: $white;
   background-color: $dark;
   border-radius: 29px;
-  padding: 0.8em 40px;
-  max-height: 58px;
+  padding: 0.889rem 2.222rem;
+  max-height: 3.222rem;
 
   &--darkblue {
     background-color: $dark-blue;
@@ -137,14 +140,15 @@ h2,
 
 header {
   display: flex;
-  margin-bottom: 110px;
+  margin-bottom: 6.111rem;
+  overflow-x: hidden;
 
   h1 {
-    padding-bottom: 34px;
+    padding-bottom: 1.889rem;
   }
 
   p {
-    padding-bottom: 48px;
+    padding-bottom: 2.667rem;
   }
 
   h1,
@@ -152,44 +156,64 @@ header {
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
   }
 
+  .top--left {
+    transform: translateX(-32px);
+  }
+
+  .top--right {
+    transform: translateX(32px);
+  }
+
   .btn {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
   }
 
   .btn--darkblue {
-    margin-right: 8px;
+    margin-right: 0.444rem;
   }
 
   .btn--purple {
-    margin-left: 8px;
-    padding: 0.8em 29px;
+    margin-left: 0.444rem;
+    padding: 0.889rem 1.611rem;
   }
 }
 
 main {
   h2 {
-    padding-bottom: 0.8em;
+    padding-bottom: 0.889rem;
   }
 
   .gallery {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding-bottom: 80px;
+    gap: 1.667rem;
+    padding-bottom: 4.444rem;
 
     img {
       border-radius: 8px;
-      width: 255px;
-      height: 242px;
+      width: 14.167rem;
+      height: 13.444rem;
+    }
+  }
+
+  .container--text {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    h2 {
+      max-width: 445px;
+      margin: auto;
     }
   }
 
   .text--overline {
     color: $dark-blue;
     text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 4px;
-    padding-bottom: 0.8em;
+    font-size: 0.889rem;
+    letter-spacing: 0.222rem;
+    padding-bottom: 0.889rem;
   }
 }
 
@@ -205,4 +229,12 @@ footer {
     display: flex;
     color: $white;
   }
+}
+
+// Tablet
+@media (max-width: 768px) {
+}
+
+// Phone
+@media (max-width: 480px) {
 }
