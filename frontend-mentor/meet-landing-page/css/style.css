@@ -15,16 +15,6 @@ body {
   line-height: 1.444rem;
   font-weight: 500;
   background-color: #fafafa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
 }
 
 h1 {
@@ -50,11 +40,6 @@ h2,
 .text--overline,
 .section--number {
   line-height: 1.444rem;
-}
-
-.logo {
-  padding-top: 4.444rem;
-  padding-bottom: 3.333rem;
 }
 
 .section--number {
@@ -136,47 +121,58 @@ h2,
   color: #87879d;
 }
 
-header {
+.logo {
+  padding-top: 4.444rem;
+  padding-bottom: 3.389rem;
+  display: block;
+  margin: auto;
+}
+
+.header__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
   margin-bottom: 6.111rem;
   overflow-x: hidden;
 }
 
-header h1 {
+.header__content h1 {
   padding-bottom: 1.889rem;
 }
 
-header p {
+.header__content p {
   padding-bottom: 2.667rem;
 }
 
-header h1,
-header p {
+.header__content h1,
+.header__content p {
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-header .top--left {
+.header__content .top--left {
   -webkit-transform: translateX(-32px);
           transform: translateX(-32px);
 }
 
-header .top--right {
+.header__content .top--right {
   -webkit-transform: translateX(32px);
           transform: translateX(32px);
 }
 
-header .btn {
+.header__content .btn {
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-header .btn--darkblue {
+.header__content .btn--darkblue {
   margin-right: 0.444rem;
 }
 
-header .btn--purple {
+.header__content .btn--purple {
   margin-left: 0.444rem;
   padding: 0.889rem 1.611rem;
 }
@@ -192,14 +188,14 @@ main .gallery {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1.667rem;
+  gap: 30px;
   padding-bottom: 4.444rem;
 }
 
 main .gallery img {
   border-radius: 8px;
-  width: 14.167rem;
-  height: 13.444rem;
+  width: 255px;
+  height: 242px;
 }
 
 main .container--text {
@@ -207,6 +203,7 @@ main .container--text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -245,5 +242,93 @@ footer .footer__content {
   display: -ms-flexbox;
   display: flex;
   color: #fafafa;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  main h2 {
+    padding-bottom: 0.889rem;
+  }
+  main .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 11px;
+    padding-bottom: 4.444rem;
+  }
+  main .gallery img {
+    width: 164px;
+    height: 156px;
+  }
+  footer {
+    background: url("../assets/tablet/image-footer.png"), #4d96a9;
+    background-position: center;
+    background-size: cover;
+  }
+  footer .footer__content {
+    padding: 92px 98px 66px 98px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  footer .footer__content h2 {
+    padding-bottom: 32px;
+  }
+  footer .footer__content p {
+    padding-bottom: 40px;
+  }
+  footer .footer__content p br {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  main h2 {
+    padding-bottom: 0.889rem;
+  }
+  main .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 25px;
+    padding-bottom: 4.444rem;
+  }
+  main .gallery img {
+    width: 151px;
+    height: 143px;
+  }
+  footer {
+    background: url("../assets/mobile/image-footer.png"), #4d96a9;
+    background-position: center;
+    background-size: cover;
+  }
+  footer .footer__content {
+    padding: 92px 24px 72px 24px;
+  }
+  footer .footer__content h2 {
+    padding-bottom: 24px;
+  }
+  footer .footer__content p {
+    padding-bottom: 32px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
