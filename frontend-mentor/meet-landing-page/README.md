@@ -23,9 +23,17 @@ Users should be able to:
 
 ### Screenshots
 
-![](screenshots/desktop-design-made.png)
-![](screenshots/tablet-design-made.png)
-![](screenshots/mobile-design-made.png)
+- Desktop
+
+  ![](screenshots/desktop-design-made.png)
+
+- Tablet
+
+  ![](screenshots/tablet-design-made.png)
+
+- Mobile
+
+  ![](screenshots/mobile-design-made.png)
 
 ## My process
 

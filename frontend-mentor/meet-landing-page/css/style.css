@@ -12,20 +12,20 @@ html {
 
 body {
   font-family: "Red Hat Display", sans-serif;
-  line-height: 1.444rem;
+  line-height: 26px;
   font-weight: 500;
   background-color: #fafafa;
 }
 
 h1 {
-  font-size: 3.556rem;
-  line-height: 3.556rem;
+  font-size: 64px;
+  line-height: 64px;
   color: #28283d;
 }
 
 h2 {
-  font-size: 2.222rem;
-  line-height: 2.444rem;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 h1,
@@ -39,7 +39,7 @@ h2,
 .btn,
 .text--overline,
 .section--number {
-  line-height: 1.444rem;
+  line-height: 26px;
 }
 
 .section--number {
@@ -122,10 +122,14 @@ h2,
 }
 
 .logo {
-  padding-top: 4.444rem;
-  padding-bottom: 3.389rem;
+  padding-top: 80px;
+  padding-bottom: 60px;
   display: block;
   margin: auto;
+}
+
+.hero__img--tablet {
+  display: none;
 }
 
 .header__content {
@@ -142,6 +146,7 @@ h2,
 
 .header__content h1 {
   padding-bottom: 1.889rem;
+  padding-top: 57px;
 }
 
 .header__content p {
@@ -156,11 +161,17 @@ h2,
 .header__content .top--left {
   -webkit-transform: translateX(-32px);
           transform: translateX(-32px);
+  margin-bottom: 55px;
+}
+
+.header__content .top--middle {
+  margin: auto auto 20px auto;
 }
 
 .header__content .top--right {
   -webkit-transform: translateX(32px);
           transform: translateX(32px);
+  margin-top: 55px;
 }
 
 .header__content .btn {
@@ -185,6 +196,8 @@ main .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -219,8 +232,8 @@ main .container--text h2 {
 main .text--overline {
   color: #4d96a9;
   text-transform: uppercase;
-  font-size: 0.889rem;
-  letter-spacing: 0.222rem;
+  font-size: 16px;
+  letter-spacing: 4px;
   padding-bottom: 0.889rem;
 }
 
@@ -244,14 +257,10 @@ footer .footer__content {
   color: #fafafa;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   h1 {
     font-size: 48px;
     line-height: 48px;
-  }
-  h2 {
-    font-size: 32px;
-    line-height: 36px;
   }
   main h2 {
     padding-bottom: 0.889rem;
@@ -269,6 +278,26 @@ footer .footer__content {
   main .gallery img {
     width: 164px;
     height: 156px;
+  }
+  .logo {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  .hero__img--tablet {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 72px;
+  }
+  .header__content h1 {
+    padding-top: unset;
+  }
+  .header__content .top--left {
+    display: none;
+  }
+  .header__content .top--right {
+    display: none;
   }
   footer {
     background: url("../assets/tablet/image-footer.png"), #4d96a9;
@@ -299,6 +328,13 @@ footer .footer__content {
     font-size: 40px;
     line-height: 44px;
   }
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  p {
+    font-size: 16px;
+  }
   main h2 {
     padding-bottom: 0.889rem;
   }
@@ -316,6 +352,32 @@ footer .footer__content {
     width: 151px;
     height: 143px;
   }
+  .logo {
+    padding-bottom: 54px;
+  }
+  .hero__img--tablet {
+    margin-bottom: 48px;
+  }
+  .header__content .top--middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+  .header__content .btn--darkblue {
+    margin-right: unset;
+    margin-bottom: 16px;
+  }
+  .header__content .btn--purple {
+    margin-left: unset;
+  }
   footer {
     background: url("../assets/mobile/image-footer.png"), #4d96a9;
     background-position: center;
@@ -329,6 +391,23 @@ footer .footer__content {
   }
   footer .footer__content p {
     padding-bottom: 32px;
+  }
+  .section--number--01 {
+    margin-top: 153px;
+    margin-bottom: 64px;
+  }
+  .section--number--02 {
+    margin-top: 163px;
+    margin-bottom: -26px;
+  }
+  .text--gray br {
+    display: none;
+  }
+  .gallery,
+  .header__content,
+  .container--text {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
