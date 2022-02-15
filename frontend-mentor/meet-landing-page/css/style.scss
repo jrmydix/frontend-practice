@@ -140,7 +140,7 @@ h2,
   display: none;
 }
 
-.header__content {
+header section {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -161,16 +161,16 @@ h2,
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
   }
 
-  .top--left {
+  .header--left {
     transform: translateX(-32px);
     margin-bottom: 55px;
   }
 
-  .top--middle {
+  .header--middle {
     margin: auto auto 20px auto;
   }
 
-  .top--right {
+  .header--right {
     transform: translateX(32px);
     margin-top: 55px;
   }
@@ -191,15 +191,15 @@ h2,
 
 main {
   h2 {
-    padding-bottom: 80px;
+    padding-bottom: 32px;
   }
 
-  .gallery {
+  .main__gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding-bottom: 4.444rem;
+    padding-bottom: 80px;
 
     img {
       border-radius: 8px;
@@ -208,7 +208,7 @@ main {
     }
   }
 
-  .container--text {
+  .main__text {
     max-width: 540px;
     display: flex;
     text-align: center;
@@ -234,7 +234,7 @@ footer {
   background: url("../assets/desktop/image-footer.png"), $dark-blue;
   background-size: cover;
 
-  .footer__content {
+  section {
     padding: 116px 165px 104px 165px;
     justify-content: space-between;
     text-align: left;
@@ -252,7 +252,7 @@ footer {
   }
 
   main {
-    .gallery {
+    .main__gallery {
       gap: 11px;
       padding-bottom: 48px;
 
@@ -276,16 +276,16 @@ footer {
     margin-bottom: 72px;
   }
 
-  .header__content {
+  header section {
     h1 {
       padding-top: unset;
     }
 
-    .top--left {
+    .header--left {
       display: none;
     }
 
-    .top--right {
+    .header--right {
       display: none;
     }
   }
@@ -295,7 +295,7 @@ footer {
     background-position: center;
     background-size: cover;
 
-    .footer__content {
+    section {
       padding: 92px 98px 66px 98px;
       flex-direction: column;
       text-align: center;
@@ -332,7 +332,7 @@ footer {
   }
 
   main {
-    .gallery {
+    .main__gallery {
       gap: 25px;
       padding-bottom: 64px;
 
@@ -355,8 +355,8 @@ footer {
     margin-bottom: 48px;
   }
 
-  .header__content {
-    .top--middle {
+  header section {
+    .header--middle {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -378,7 +378,7 @@ footer {
     background-position: center;
     background-size: cover;
 
-    .footer__content {
+    section {
       padding: 92px 24px 72px 24px;
 
       h2 {
@@ -409,9 +409,9 @@ footer {
     }
   }
 
-  .gallery,
-  .header__content,
-  .container--text {
+  .main__gallery,
+  header section,
+  .main__text {
     padding-left: 24px;
     padding-right: 24px;
   }
