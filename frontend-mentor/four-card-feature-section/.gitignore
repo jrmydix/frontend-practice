@@ -1,0 +1,5 @@
+*.css.map
+*.sketch
+*.xd
+*.fig
+.DS_Store

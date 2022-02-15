@@ -1,0 +1,175 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+// Variables
+$red: #ea5454;
+$teal: #44d3d2;
+$orange: #fcae4a;
+$blue: #549ef2;
+$text: #4d4f62;
+$background: #fafafa;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// CSS
+body {
+  background-color: $background;
+  color: $text;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 85px 32px 54px 32px;
+}
+
+br {
+  display: none;
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.17px;
+}
+
+h1,
+h2,
+.text--subtitle {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 275;
+}
+
+h2 {
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+
+p {
+  opacity: 0.5;
+}
+
+.text--subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.1px;
+  padding-bottom: 76px;
+}
+
+.card {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  padding: 28px;
+  margin-bottom: 24px;
+  border-top: 3.55px solid;
+
+  &--supervisor {
+    border-color: $teal;
+  }
+
+  &--teambuilder {
+    border-color: $red;
+  }
+
+  &--karma {
+    border-color: $orange;
+  }
+
+  &--calculator {
+    border-color: $blue;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 1px;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.09;
+    padding-bottom: 33px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    width: 57px;
+    height: 57px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 80px 165px;
+  }
+
+  br {
+    display: unset;
+  }
+
+  h1,
+  h2 {
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+  }
+
+  .text--subtitle {
+    padding-bottom: 64px;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: unset;
+    padding: 32px;
+
+    &--supervisor,
+    &--calculator {
+      position: relative;
+      top: 50%;
+    }
+
+    &--karma {
+      grid-column: 2/3;
+    }
+
+    &--calculator {
+      grid-row: 1;
+      grid-column: 3/-1;
+    }
+
+    h3 {
+      padding-bottom: 6px;
+    }
+
+    p {
+      padding-bottom: 40px;
+    }
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
