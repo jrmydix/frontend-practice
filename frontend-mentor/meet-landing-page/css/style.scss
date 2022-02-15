@@ -46,17 +46,17 @@ h1,
 h2,
 .btn,
 .text--overline,
-.section--number {
+.section__number {
   font-weight: 900;
 }
 
 .btn,
 .text--overline,
-.section--number {
+.section__number {
   line-height: 26px;
 }
 
-.section--number {
+.section__number {
   position: relative;
   display: flex;
   justify-content: center;
@@ -191,7 +191,7 @@ h2,
 
 main {
   h2 {
-    padding-bottom: 0.889rem;
+    padding-bottom: 80px;
   }
 
   .gallery {
@@ -226,7 +226,7 @@ main {
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 4px;
-    padding-bottom: 0.889rem;
+    padding-bottom: 16px;
   }
 }
 
@@ -252,15 +252,9 @@ footer {
   }
 
   main {
-    h2 {
-      padding-bottom: 0.889rem;
-    }
-
     .gallery {
-      display: flex;
-      justify-content: center;
       gap: 11px;
-      padding-bottom: 4.444rem;
+      padding-bottom: 48px;
 
       img {
         width: 164px;
@@ -338,20 +332,18 @@ footer {
   }
 
   main {
-    h2 {
-      padding-bottom: 0.889rem;
-    }
-
     .gallery {
-      display: flex;
-      justify-content: center;
       gap: 25px;
-      padding-bottom: 4.444rem;
+      padding-bottom: 64px;
 
       img {
         width: 151px;
         height: 143px;
       }
+    }
+
+    .text--overline {
+      padding-bottom: 24px;
     }
   }
 
@@ -399,7 +391,7 @@ footer {
     }
   }
 
-  .section--number {
+  .section__number {
     &--01 {
       margin-top: 153px;
       margin-bottom: 64px;
