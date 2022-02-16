@@ -1,0 +1,175 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// Variables
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+$white: #fff;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// CSS
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("../assets/bg-mobile.svg") no-repeat $violet;
+  padding: 40px;
+  color: $white;
+}
+
+h1,
+p,
+a {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 16px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 35px;
+}
+
+.btn--register {
+  color: $violet;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: $white;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+  border-radius: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  display: block;
+  margin-left: 52px;
+  margin-right: 52px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $magenta;
+    color: $white;
+  }
+}
+
+.logo {
+  padding-bottom: 27px;
+  width: 120px;
+  height: 100px;
+}
+
+.illustration {
+  max-width: 100%;
+  padding-bottom: 60px;
+}
+
+footer {
+  padding-top: 74px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  svg {
+    width: 33px;
+    height: 33px;
+    fill: $white;
+    border: 1px solid $white;
+    border-radius: 45%;
+    padding: 7.5px;
+
+    &:hover {
+      cursor: pointer;
+      fill: $magenta;
+      border-color: $magenta;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url("../assets/bg-desktop.svg") $violet;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+    overflow: hidden;
+  }
+
+  main {
+    padding-bottom: 128px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  h1,
+  p {
+    text-align: left;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    padding-bottom: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .btn--register {
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 28px;
+    padding: 14px 64px;
+    display: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .logo {
+    width: 220px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    padding-bottom: unset;
+  }
+
+  .illustration {
+    padding-bottom: unset;
+  }
+
+  footer {
+    padding-top: unset;
+    text-align: center;
+    display: flex;
+    justify-content: right;
+    gap: 23px;
+
+    svg {
+      border: 2px solid $white;
+      width: 55px;
+      height: 55px;
+      padding: 15px;
+    }
+  }
+}
