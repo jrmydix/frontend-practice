@@ -108,12 +108,13 @@ footer {
   }
 
   main {
-    padding-bottom: 128px;
+    padding-bottom: 96px;
   }
 
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
@@ -167,9 +168,9 @@ footer {
 
     svg {
       border: 2px solid $white;
-      width: 55px;
-      height: 55px;
-      padding: 15px;
+      width: 45px;
+      height: 45px;
+      padding: 12px;
     }
   }
 }
