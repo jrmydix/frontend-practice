@@ -168,19 +168,22 @@ main {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 20px 90px 20px 32px;
+      padding: 20px 0px 20px 32px;
       margin-bottom: unset;
 
       &--left {
         align-self: flex-start;
+        padding-right: 90px;
       }
 
       &--middle {
         align-self: center;
+        padding-right: 60px;
       }
 
       &--right {
         align-self: flex-end;
+        padding-right: 88px;
       }
 
       p {
