@@ -26,9 +26,17 @@ Users should be able to:
 
   ![](screenshots/desktop-design-made.png)
 
+- Desktop active
+
+  ![](screenshots/desktop-design-made-active.png)
+
 - Mobile
 
   ![](screenshots/mobile-design-made.png)
+
+- Mobile active
+
+  ![](screenshots/mobile-design-made-active.png)
 
 ## My process
 
@@ -36,6 +44,7 @@ Users should be able to:
 
 - HTML
 - Sass
+- JavaScript
 
 ## Author
 

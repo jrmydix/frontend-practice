@@ -58,20 +58,19 @@ section {
 }
 
 .share--icon {
-  display: block;
   margin-left: auto;
   margin-right: unset;
   background-color: $background;
-  padding: 10px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   z-index: 2;
+  cursor: pointer;
+  fill: $desatured-dark-blue;
 
   &.active {
     background-color: $desatured-dark-blue;
-  }
-
-  &:hover {
-    cursor: pointer;
+    fill: $background;
   }
 }
 
@@ -85,6 +84,13 @@ section {
   background-color: $dark-grayish-blue;
   border-radius: 10px;
   box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+
+  &-arrow {
+    position: absolute;
+    border: 12px solid transparent;
+    border-left-color: $dark-grayish-blue;
+    right: -24px;
+  }
 
   img:hover {
     cursor: pointer;
@@ -154,6 +160,10 @@ section {
     transform: translateX(-32px);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+
+    &-arrow {
+      display: none;
+    }
   }
 
   .article {
