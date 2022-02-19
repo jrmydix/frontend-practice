@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+<body>
+  <header>
+    <img src="assets/desktop/logo.svg" alt="pod" class="logo">
+  </header>
+
+  <main>
+    <img src="assets/desktop/image-host.jpg" alt="" class="img--host-desktop" aria-hidden="true">
+    <img src="assets/tablet/image-host.jpg" alt="" class="img--host-tablet" aria-hidden="true">
+    <h1>Publish your podcasts <br> <span>everywhere.</span></h1>
+
+    <p>
+      Upload your audio to Pod with a single click. We’ll <br> then distribute your podcast to Spotify, 
+      Apple <br> Podcasts, Google Podcasts, Pocket Casts and more!
+    </p>
+
+    <section class="main__brands--mobile">
+      <img src="assets/desktop/spotify.svg" alt="" aria-hidden="true">
+      <img src="assets/desktop/apple-podcast.svg" alt="" aria-hidden="true">
+      <img src="assets/desktop/google-podcasts.svg" alt="" aria-hidden="true">
+      <img src="assets/desktop/pocket-casts.svg" alt="" aria-hidden="true">
+    </section>
+
+    <form action="#">
+      <input type="email" placeholder="Email adress" name="email" class="input--input" required>
+      <input type="submit" value="Request Access" class="input--submit" onclick="emailValidation(email)">
+      <p id="error-message" class="hidden">Oops! Please check your email</p>
+    </form>
+
+    <section class="main__brands">
+      <img src="assets/desktop/spotify.svg" alt="" aria-hidden="true">
+      <img src="assets/desktop/apple-podcast.svg" alt="" aria-hidden="true">
+      <img src="assets/desktop/google-podcasts.svg" alt="" aria-hidden="true">
+      <img src="assets/desktop/pocket-casts.svg" alt="" aria-hidden="true">
+    </section>
+    <img src="assets/desktop/bg-pattern-dots.svg" alt="" class="img--dots" aria-hidden="true">
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

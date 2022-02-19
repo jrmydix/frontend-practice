@@ -1,0 +1,281 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap");
+
+// Variables
+$white: #fff;
+$accent: #54e6af;
+$accent-hover: #b3ffe2;
+$background: #121725;
+$idk: #2c344b;
+$idk-lighter: #5a668a;
+$light: #c2cbe5;
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// CSS
+body {
+  font-family: "Chivo", sans-serif;
+  padding-top: 102px;
+  padding-left: 165px;
+}
+
+body,
+main {
+  background-color: $background;
+}
+
+main {
+  padding-top: 88px;
+  width: 723px;
+  height: 509px;
+}
+
+h1 {
+  font-weight: 300;
+  color: $accent;
+  font-size: 52px;
+  line-height: 62px;
+  text-transform: uppercase;
+  padding-bottom: 24px;
+
+  span {
+    color: $white;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+  color: $light;
+  padding-bottom: 40px;
+}
+
+.logo {
+  padding-bottom: 103px;
+}
+
+.hidden {
+  display: none;
+}
+
+.img--host {
+  &-desktop {
+    position: absolute;
+    width: 888px;
+    height: 640px;
+    left: 552px;
+    top: 130px;
+    z-index: -1;
+  }
+
+  &-tablet {
+    display: none;
+  }
+}
+
+.img--dots {
+  position: absolute;
+  width: 232px;
+  height: 104px;
+  left: 1208px;
+  top: 718px;
+}
+
+form p {
+  position: absolute;
+  color: #fb3e3e;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  padding-top: 8px;
+  padding-bottom: unset;
+  padding-left: 32px;
+}
+
+input {
+  border-radius: 28px;
+  border: 0;
+  font-family: "Chivo", sans-serif;
+  font-weight: 700;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input-- {
+  &input {
+    background-color: $idk;
+    color: $white;
+    width: 427px;
+    height: 56px;
+    padding-left: 32px;
+  }
+
+  &submit {
+    background-color: $accent;
+    color: $background;
+    box-shadow: 0px 2px 4px rgba(84, 230, 175, 0.14);
+    width: 162px;
+    height: 46px;
+    transform: translateX(-172px);
+
+    &:hover {
+      cursor: pointer;
+      background-color: $accent-hover;
+    }
+  }
+}
+
+.main__brands {
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  filter: brightness(0) saturate(100%) invert(41%) sepia(15%) saturate(957%)
+    hue-rotate(187deg) brightness(91%) contrast(90%);
+
+  &--mobile {
+    display: none;
+  }
+}
+
+// Tablet
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+    padding-left: 39px;
+  }
+
+  main {
+    padding-top: 92px;
+    width: 635px;
+    height: 509px;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 56px;
+    padding-bottom: 32px;
+  }
+
+  .logo {
+    padding-bottom: 152px;
+  }
+
+  .img--host {
+    &-tablet {
+      display: unset;
+      position: absolute;
+      width: 491px;
+      height: 767px;
+      left: 277px;
+      top: 0px;
+      z-index: -1;
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+
+  .img--dots {
+    position: absolute;
+    width: 232px;
+    height: 104px;
+    left: 30px;
+    top: 920px;
+  }
+}
+
+// Phone
+@media (max-width: 480px) {
+  body {
+    padding: 62px 24px 94px 24px;
+    display: block;
+    text-align: center;
+    background: url("../assets/mobile/image-host.png") no-repeat $background;
+  }
+
+  br {
+    display: none;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 16px;
+  }
+
+  main {
+    padding-top: unset;
+    width: unset;
+    height: unset;
+    background: none;
+  }
+
+  .logo {
+    padding-bottom: 57px;
+  }
+
+  .img--host {
+    &-desktop,
+    &-tablet {
+      display: none;
+    }
+  }
+
+  .img--dots {
+    display: none;
+  }
+
+  .input-- {
+    &input {
+      width: 100%;
+      height: 46px;
+      margin-bottom: 16px;
+    }
+
+    &submit {
+      background-color: $accent;
+      color: $background;
+      box-shadow: 0px 2px 4px rgba(84, 230, 175, 0.14);
+      width: 100%;
+      transform: none;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $accent-hover;
+      }
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom: 32px;
+  }
+
+  .main__brands {
+    display: none;
+
+    &--mobile {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      filter: brightness(0) saturate(100%) invert(41%) sepia(15%) saturate(957%)
+        hue-rotate(187deg) brightness(91%) contrast(90%);
+
+      img {
+        width: 21%;
+        height: 21%;
+      }
+    }
+  }
+}
