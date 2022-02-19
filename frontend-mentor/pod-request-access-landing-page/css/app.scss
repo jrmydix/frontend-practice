@@ -20,8 +20,9 @@ $light: #c2cbe5;
 // CSS
 body {
   font-family: "Chivo", sans-serif;
-  padding-top: 102px;
-  padding-left: 165px;
+  padding: 102px 0px 130px 165px;
+  background: url(../assets/desktop/bg-pattern-dots.svg) no-repeat bottom 80px right,
+    url(../assets/desktop/image-host.jpg) no-repeat center right, $background;
 }
 
 body,
@@ -57,33 +58,6 @@ p {
 
 .logo {
   padding-bottom: 103px;
-}
-
-.hidden {
-  display: none;
-}
-
-.img--host {
-  &-desktop {
-    position: absolute;
-    width: 888px;
-    height: 640px;
-    left: 552px;
-    top: 130px;
-    z-index: -1;
-  }
-
-  &-tablet {
-    display: none;
-  }
-}
-
-.img--dots {
-  position: absolute;
-  width: 232px;
-  height: 104px;
-  left: 1208px;
-  top: 718px;
 }
 
 form p {
@@ -146,10 +120,11 @@ input {
 }
 
 // Tablet
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   body {
-    padding-top: 50px;
-    padding-left: 39px;
+    background: url(../assets/tablet/image-host.jpg) no-repeat top right,
+      url(../assets/desktop/bg-pattern-dots.svg) no-repeat 30px bottom, $background;
+    padding: 50px 0px 257px 39px;
   }
 
   main {
@@ -167,39 +142,16 @@ input {
   .logo {
     padding-bottom: 152px;
   }
-
-  .img--host {
-    &-tablet {
-      display: unset;
-      position: absolute;
-      width: 491px;
-      height: 767px;
-      left: 277px;
-      top: 0px;
-      z-index: -1;
-    }
-
-    &-desktop {
-      display: none;
-    }
-  }
-
-  .img--dots {
-    position: absolute;
-    width: 232px;
-    height: 104px;
-    left: 30px;
-    top: 920px;
-  }
 }
 
 // Phone
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   body {
     padding: 62px 24px 94px 24px;
     display: block;
     text-align: center;
     background: url("../assets/mobile/image-host.png") no-repeat $background;
+    background-size: cover;
   }
 
   br {
@@ -221,17 +173,6 @@ input {
 
   .logo {
     padding-bottom: 57px;
-  }
-
-  .img--host {
-    &-desktop,
-    &-tablet {
-      display: none;
-    }
-  }
-
-  .img--dots {
-    display: none;
   }
 
   .input-- {
