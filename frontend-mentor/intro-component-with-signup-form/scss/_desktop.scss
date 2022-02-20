@@ -1,0 +1,54 @@
+@media screen and (min-width: 1280px) {
+  body {
+    background: url("../assets/bg-intro-desktop.png"), $red;
+    min-height: 100vh;
+    padding: 121px 165px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.52px;
+  }
+
+  .head {
+    max-width: 540px;
+    text-align: left;
+
+    &--paragraph {
+      margin-bottom: unset;
+    }
+  }
+
+  .form {
+    max-width: 540px;
+
+    &__head {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+
+    &__input--invalid {
+      margin-bottom: 20px;
+    }
+
+    &__input.invalid {
+      background: url("../assets/icon-error.svg") center right 27px no-repeat;
+    }
+
+    &__terms {
+      line-height: 26px;
+    }
+  }
+
+  form {
+    padding: 40px;
+  }
+}

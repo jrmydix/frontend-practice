@@ -1,0 +1,124 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  text-align: center;
+  padding: 88px 24px 68px 24px;
+  background: url("../assets/bg-intro-mobile.png"), $red;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.29px;
+  margin-bottom: 16px;
+}
+
+h1,
+.head--paragraph,
+.form__head,
+.form__submit {
+  color: #fff;
+}
+
+.head {
+  &--paragraph {
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 46px;
+  }
+}
+
+.form__head,
+form {
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+}
+
+.form__input.invalid + .form__input--invalid {
+  opacity: 1;
+}
+
+.form {
+  &__head {
+    background-color: $purple;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.26px;
+    padding: 18px 66px;
+    margin-bottom: 24px;
+
+    &--span {
+      font-weight: 700;
+    }
+  }
+
+  &__input--invalid {
+    opacity: 0;
+    color: $red;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: right;
+    margin-bottom: 16px;
+  }
+
+  &__input.invalid {
+    background: url("../assets/icon-error.svg") center right 14px no-repeat;
+    color: $red;
+    border-color: $red;
+  }
+
+  &__submit {
+    background-color: $green;
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 8px;
+
+    &:hover {
+      background-color: #77e2b3;
+      cursor: pointer;
+    }
+  }
+
+  &__terms {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 21px;
+    color: #bab7d4;
+
+    &--span {
+      font-weight: 700;
+      color: #ff7979;
+    }
+  }
+}
+
+form {
+  background-color: #fff;
+  padding: 24px;
+}
+
+input {
+  width: 100%;
+  padding: 15px 0px 15px 20px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  color: $dark;
+  opacity: 0.75;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $purple;
+    opacity: 1;
+  }
+}
