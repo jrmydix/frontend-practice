@@ -1,0 +1,98 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  color: $pink;
+}
+
+.logo {
+  margin: 32px;
+}
+
+main {
+  padding: 64px 32px 92px 32px;
+}
+
+.hero__img {
+  background: url("../assets/hero-mobile.jpg") no-repeat;
+  height: 250px;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 10.8px;
+  margin-bottom: 16px;
+
+  span {
+    color: $brown;
+    font-weight: 600;
+  }
+}
+
+.main__intro {
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 32px;
+}
+
+.form {
+  &__submit {
+    position: absolute;
+    right: 32px;
+    background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    border-radius: 28px;
+    width: 64px;
+    height: 48px;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 9px 0px 9px 24px;
+    border: 1px solid $pink;
+    border-radius: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    color: $pink;
+    opacity: 0.5;
+    margin-bottom: 8px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $pink;
+      color: $brown;
+      opacity: 1;
+    }
+
+    &--invalid {
+      opacity: 1;
+      color: $red;
+      text-align: left;
+      font-size: 13px;
+      line-height: 13px;
+      margin-left: 24px;
+    }
+
+    &.invalid {
+      background: url("../assets/icon-error.svg") center right 72px no-repeat;
+      opacity: 1;
+      color: $brown;
+      border-color: $red;
+    }
+  }
+}
+
+.form__input.invalid + .form__input--invalid {
+  opacity: 1;
+}

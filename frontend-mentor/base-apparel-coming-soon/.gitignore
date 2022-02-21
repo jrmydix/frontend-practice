@@ -1,0 +1,6 @@
+*.css.map
+*.sketch
+*.fig
+*.xd
+style-guide.md
+.DS_Store
