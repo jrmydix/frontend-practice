@@ -67,8 +67,11 @@ header {
     letter-spacing: -2px;
   }
 
-  &__down-arrow {
+  &__down-a {
     align-self: center;
+  }
+
+  &__down-arrow {
     cursor: pointer;
     padding: 8px;
     margin-bottom: 16px;
@@ -172,7 +175,7 @@ footer {
 .footer {
   &__links {
     display: flex;
-    gap: 128px;
+    gap: 96px;
     margin-bottom: 48px;
     opacity: 0.75;
 
@@ -199,6 +202,5 @@ main {
 }
 
 footer {
-  padding-left: 256px;
-  padding-right: 256px;
+  padding-left: 448px;
 }

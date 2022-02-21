@@ -4,10 +4,15 @@
 
 body {
   color: $pink;
+  background: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
 }
 
 .logo {
   margin: 32px;
+
+  &--desktop {
+    display: none;
+  }
 }
 
 main {
@@ -16,6 +21,8 @@ main {
 
 .hero__img {
   background: url("../assets/hero-mobile.jpg") no-repeat;
+  background-size: cover;
+  width: 100vw;
   height: 250px;
   padding: 0;
   margin: 0;
@@ -46,7 +53,7 @@ h1 {
 .form {
   &__submit {
     position: absolute;
-    right: 32px;
+    transform: translateX(-64px);
     background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
     box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
     border-radius: 28px;
@@ -76,7 +83,7 @@ h1 {
     }
 
     &--invalid {
-      opacity: 1;
+      opacity: 0;
       color: $red;
       text-align: left;
       font-size: 13px;
@@ -90,9 +97,9 @@ h1 {
       color: $brown;
       border-color: $red;
     }
-  }
-}
 
-.form__input.invalid + .form__input--invalid {
-  opacity: 1;
+    &.invalid + button + &--invalid {
+      opacity: 1;
+    }
+  }
 }

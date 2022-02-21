@@ -1,2 +1,63 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
+  body {
+    min-height: 100vh;
+    background: url("../assets/bg-pattern-desktop.svg") no-repeat,
+      linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    left: 165px;
+    top: 75px;
+  }
+
+  .hero__img {
+    height: 100vh;
+    width: unset;
+    background: url("../assets/hero-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: 17.3px;
+    margin-bottom: 32px;
+    margin-top: 10vh;
+    text-align: left;
+
+    span {
+      line-height: 71px;
+    }
+  }
+
+  .main__intro {
+    text-align: left;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  .form {
+    &__submit {
+      width: 100px;
+      transform: translateX(-100px);
+    }
+  }
+
+  main {
+    max-width: 445px;
+    padding: 0;
+    order: 1;
+    justify-self: center;
+  }
+
+  header {
+    order: 2;
+  }
 }
