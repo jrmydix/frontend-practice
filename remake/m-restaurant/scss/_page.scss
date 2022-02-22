@@ -25,6 +25,17 @@ header {
   h1 {
     font-weight: 300;
     font-family: "Frank Ruhl Libre", serif;
+    padding-bottom: 16px;
+  }
+
+  hr {
+    border: 1px outset;
+    background-color: $white;
+    color: $white;
+    height: 1px;
+    width: 15%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
   }
 
   nav {
@@ -52,7 +63,7 @@ header {
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -112,7 +123,7 @@ header {
     margin-bottom: 16px;
     width: 32px;
     height: 29px;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     border-radius: 50%;
   }
 }
@@ -135,6 +146,9 @@ main {
     right: 28vw;
     @media screen and (max-width: 632px) {
       top: 170vh;
+    }
+    @media screen and (max-width: 530px) {
+      display: none;
     }
   }
 
@@ -160,7 +174,7 @@ main {
   }
 
   section {
-    background-color: #fff;
+    background-color: $white;
     max-width: 50vw;
     @media screen and (max-width: 1508px) {
       max-width: 65vw;
@@ -236,6 +250,10 @@ footer {
   .logo {
     padding-bottom: 48px;
   }
+
+  address {
+    font-style: normal;
+  }
 }
 
 .footer {
@@ -269,6 +287,10 @@ footer {
     &--title {
       text-transform: uppercase;
       margin-bottom: 16px;
+    }
+
+    & > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1) {
+      text-decoration: none;
     }
   }
 
