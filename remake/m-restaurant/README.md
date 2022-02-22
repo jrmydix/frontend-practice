@@ -29,7 +29,7 @@
 
 - Objective
 
-  ![](design/homepage.jpg)
+  ![](design/Homepage.jpg)
 
 ## My process
 
