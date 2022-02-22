@@ -1,0 +1,112 @@
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: $main-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27.72px;
+  color: $white;
+  margin-bottom: 16px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 24px;
+  color: $soft-blue;
+}
+
+.card {
+  background-color: $card-bg;
+  max-width: 350px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+  border-radius: 15px;
+  padding: 24px;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $cyan;
+      cursor: pointer;
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin-bottom: 24px;
+
+    &--nft {
+      border-radius: 8px;
+      max-width: 302px;
+    }
+
+    &--overlay {
+      width: 302px;
+      height: 302px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: hsl(178, 100%, 50%, 0.5);
+      border-radius: 8px;
+      transition: 0.5s ease;
+      opacity: 0;
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:hover &--overlay {
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    &--avatar {
+      width: 33px;
+      height: 33px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      vertical-align: -50%;
+      margin-right: 16px;
+    }
+  }
+
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+
+    &--eth,
+    &--time {
+      font-size: 16px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    &--eth {
+      color: $cyan;
+      font-weight: 600;
+    }
+  }
+
+  &__credits--p {
+    font-size: 16px;
+    line-height: 20px;
+    border-top: 1px solid $line;
+    padding-top: 16px;
+    margin-bottom: 8px;
+  }
+}
