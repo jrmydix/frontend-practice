@@ -7,7 +7,7 @@ ul {
 }
 
 .logo {
-  width: 64px;
+  width: 4rem;
 }
 
 header {
@@ -31,16 +31,21 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-
-  a {
-    &:hover {
-      color: brown;
+    @media screen and (max-width: 632px) {
+      justify-content: space-between;
+      align-items: unset;
+      margin: 16px;
     }
   }
 
   li {
     display: inline;
+    @media screen and (max-width: 632px) {
+      display: block;
+      text-align: right;
+      margin-bottom: 16px;
+    }
+
     text-transform: uppercase;
     padding-left: 16px;
   }
@@ -48,6 +53,36 @@ header {
   a {
     text-decoration: none;
     color: #fff;
+  }
+}
+
+.link {
+  position: relative;
+
+  &::before {
+    content: "";
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+  }
+
+  &--navbar::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+
+  &--navbar:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
   }
 }
 
@@ -90,17 +125,21 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 128px;
+  align-items: center;
+  gap: 8rem;
 
   .logo--certified {
-    width: 128px;
+    width: 8rem;
     position: absolute;
     top: 104vh;
     right: 28vw;
+    @media screen and (max-width: 632px) {
+      top: 170vh;
+    }
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 32px;
   }
 
@@ -116,35 +155,62 @@ main {
   }
 
   p {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 32px;
   }
 
   section {
+    background-color: #fff;
+    max-width: 50vw;
+    @media screen and (max-width: 1508px) {
+      max-width: 65vw;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 70vw;
+    }
+
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-    background-color: #fff;
+    @media screen and (max-width: 632px) {
+      display: block;
+    }
 
     div:nth-child(even) {
-      padding: 64px 64px 64px 0px;
+      padding: 4rem 4rem 4rem 0px;
+      @media screen and (max-width: 632px) {
+        padding: 4rem;
+      }
     }
 
     div:nth-child(odd) {
-      padding: 64px 0px 64px 64px;
+      padding: 4rem 0px 4rem 4rem;
+      @media screen and (max-width: 632px) {
+        padding: 4rem;
+      }
     }
 
     img {
-      height: 385px;
+      height: 24.063rem;
+      @media screen and (max-width: 632px) {
+        object-fit: cover;
+        width: 100%;
+      }
     }
 
     img:nth-child(odd) {
-      transform: translate(-64px, 64px);
+      transform: translate(-4rem, 4rem);
+      @media screen and (max-width: 632px) {
+        transform: none;
+      }
     }
 
     img:nth-child(even) {
       margin-left: auto;
-      transform: translate(64px, 64px);
+      transform: translate(4rem, 4rem);
+      @media screen and (max-width: 632px) {
+        transform: none;
+      }
     }
 
     p {
@@ -160,7 +226,7 @@ footer {
   padding-bottom: 48px;
 
   ul li a > img {
-    width: 20px;
+    width: 1.25rem;
   }
 
   a {
@@ -173,14 +239,30 @@ footer {
 }
 
 .footer {
+  &__content {
+    margin: 0 auto;
+    max-width: 55vw;
+    @media screen and (max-width: 1508px) {
+      max-width: 75vw;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 80vw;
+    }
+  }
+
   &__links {
+    gap: 5vw;
     display: flex;
-    gap: 96px;
+    @media screen and (max-width: 632px) {
+      flex-direction: column;
+    }
+
     margin-bottom: 48px;
     opacity: 0.75;
 
     &--social {
       display: flex;
+      flex-wrap: wrap;
       gap: 16px;
     }
 
@@ -191,16 +273,19 @@ footer {
   }
 
   &__copyright {
-    font-size: 12px;
+    font-size: 0.75rem;
     opacity: 0.5;
   }
 }
 
-main {
-  padding-left: 512px;
-  padding-right: 512px;
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
 }
 
-footer {
-  padding-left: 448px;
+@media screen and (max-width: 1162px) {
+  html {
+    font-size: 12px;
+  }
 }
