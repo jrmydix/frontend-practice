@@ -1,0 +1,83 @@
+@media screen and (min-width: 480px) {
+  header {
+    background-image: url("../assets/bg-pattern-1.svg"),
+      url("../assets/bg-main-tablet.png");
+    background-position: top -32px right -32px, right 39px bottom 112px;
+    background-repeat: no-repeat;
+    background-size: 266px, 983px;
+    padding: 62px 39px;
+
+    .logo {
+      margin-bottom: 96px;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 64px;
+      letter-spacing: -0.727273px;
+      margin-bottom: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 170px;
+    }
+  }
+
+  .header {
+    &__presentation {
+      max-width: 515px;
+    }
+  }
+
+  main {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  .main {
+    &__images {
+      z-index: unset;
+      position: unset;
+      transform: none;
+      background-position: top;
+
+      img {
+        transform: translateY(-138px);
+        width: 270.21px;
+        height: 556px;
+        margin-left: 64px;
+      }
+    }
+
+    &__pricing {
+      padding: 48px 48px;
+      max-width: 399px;
+      position: absolute;
+      left: 272px;
+      top: 910px;
+    }
+  }
+
+  footer {
+    padding: 233px 33px 85px 33px;
+
+    p:nth-child(3) {
+      margin-bottom: unset;
+    }
+  }
+
+  .footer {
+    &__tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      &--text {
+        max-width: 366px;
+      }
+    }
+  }
+}
