@@ -150,16 +150,16 @@ footer {
     }
   }
 
-  p:nth-child(3) {
-    margin-bottom: 64px;
-  }
-
   svg path {
     fill: $black;
   }
 }
 
 .footer {
+  &__tablet--text > p:nth-child(2) {
+    margin-bottom: 64px;
+  }
+
   &__socials {
     display: flex;
     align-items: center;

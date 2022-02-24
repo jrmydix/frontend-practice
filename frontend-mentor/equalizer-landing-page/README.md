@@ -9,6 +9,7 @@ This is my solution to the [Equalizer landing page challenge on Frontend Mentor]
   - [Screenshots](#screenshots)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -40,6 +41,10 @@ Users should be able to:
 
 - HTML
 - Sass
+
+### What I learned
+
+Finally I learned how to use `position: absolute;` properly, and I'm very very happy about it! 🙂
 
 ## Author
 

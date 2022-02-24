@@ -34,6 +34,7 @@
   main {
     padding-left: 33px;
     padding-right: 33px;
+    position: relative;
   }
 
   .main {
@@ -55,8 +56,8 @@
       padding: 48px 48px;
       max-width: 399px;
       position: absolute;
-      left: 272px;
-      top: 910px;
+      right: 97px;
+      top: 150px;
     }
   }
 
@@ -74,6 +75,10 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+
+      &--text > p:nth-child(2) {
+        margin-bottom: unset;
+      }
 
       &--text {
         max-width: 366px;
