@@ -1,0 +1,173 @@
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  background-color: $white;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+header {
+  color: $black;
+  background: url(../assets/bg-main-mobile.png) bottom left;
+  padding: 40px 24px;
+
+  .logo {
+    margin-bottom: 64px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.454545px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 68px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.18px;
+  padding: 16px;
+  transition: background-color 0.4s;
+
+  &--apple {
+    color: $white;
+    background-color: $black;
+    margin-bottom: 16px;
+
+    svg path {
+      fill: $white;
+    }
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &--android {
+    color: $black;
+    background-color: $white;
+
+    svg path {
+      fill: $black;
+    }
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
+
+.main {
+  &__images {
+    z-index: -1;
+    position: relative;
+    transform: translateY(32px);
+    background: url("../assets/bg-pattern-2.svg") no-repeat center, $black;
+
+    img {
+      transform: translateY(-98px);
+      width: 208.97px;
+      height: 430px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &__pricing,
+  &__images {
+    border-radius: 12px;
+  }
+
+  &__pricing {
+    color: $white;
+    padding: 48px 36px;
+    background-color: $orange;
+
+    &--title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 12px;
+    }
+
+    &--features {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 36px;
+    }
+
+    &--price {
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+
+      & span {
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 52px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 64px 24px;
+  color: $black;
+
+  .logo {
+    margin-bottom: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  p:nth-child(3) {
+    margin-bottom: 64px;
+  }
+
+  svg path {
+    fill: $black;
+  }
+}
+
+.footer {
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a:hover {
+      filter: invert(57%) sepia(50%) saturate(1643%) hue-rotate(326deg)
+        brightness(100%) contrast(97%);
+    }
+  }
+}
