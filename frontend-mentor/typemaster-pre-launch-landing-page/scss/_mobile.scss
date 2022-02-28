@@ -114,7 +114,8 @@ p {
     }
 
     &--tablet,
-    &--desktop {
+    &--desktop,
+    &--desktop-square {
       display: none;
     }
   }
@@ -167,7 +168,8 @@ main {
     gap: 24px;
 
     &--tablet,
-    &--desktop {
+    &--desktop,
+    &--desktop-square {
       display: none;
     }
 
