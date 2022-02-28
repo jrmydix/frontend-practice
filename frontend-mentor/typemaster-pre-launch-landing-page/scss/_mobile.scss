@@ -98,14 +98,25 @@ p {
     &--p {
       font-weight: 700;
       margin-right: 18px;
+      text-transform: uppercase;
     }
   }
 
   &__img {
     width: 372px;
     height: 331px;
-    border-radius: 20px;
     margin-bottom: 24px;
+
+    &,
+    &--tablet,
+    &--desktop {
+      border-radius: 20px;
+    }
+
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
   }
 }
 
@@ -154,6 +165,11 @@ main {
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
+
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
 
     img {
       height: 193px;
