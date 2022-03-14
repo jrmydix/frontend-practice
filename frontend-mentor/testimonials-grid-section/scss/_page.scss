@@ -1,0 +1,185 @@
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: $bg;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 11.458vw;
+  padding-right: 11.458vw;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.card {
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  border-radius: 8px;
+  padding: 26px 32px;
+
+  img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+
+  &__author {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    margin-bottom: 18px;
+
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      line-height: 13px;
+
+      span {
+        font-size: 11px;
+        line-height: 11px;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__testimonial {
+    mix-blend-mode: normal;
+    opacity: 0.7;
+  }
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 24px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 3;
+  background: url("../assets/bg-pattern-quotation.svg") no-repeat right 80px top,
+    $purple;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid $purpleish;
+  }
+
+  h1 {
+    color: $white;
+  }
+
+  .card__author {
+    p {
+      color: $white;
+    }
+  }
+
+  .card__testimonial {
+    color: #cfcfcf;
+  }
+}
+
+.div2 {
+  grid-area: 1 / 3 / 2 / 4;
+  background-color: $grayish;
+
+  h2,
+  .card__testimonial {
+    color: $white;
+  }
+
+  .card__author {
+    p {
+      color: $white;
+    }
+  }
+}
+
+.div3 {
+  grid-area: 1 / 4 / 3 / 5;
+  background-color: $white;
+
+  h2,
+  .card__testimonial {
+    color: $grayish;
+  }
+
+  .card__author {
+    p {
+      color: $grayish;
+    }
+  }
+}
+
+.div4 {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: $white;
+
+  h2,
+  .card__testimonial {
+    color: $grayish;
+  }
+
+  .card__author {
+    p {
+      color: $grayish;
+    }
+  }
+}
+
+.div5 {
+  grid-area: 2 / 2 / 3 / 4;
+  background-color: $darkish;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid $purple;
+  }
+
+  h2 {
+    color: $whiteish;
+  }
+
+  .card__testimonial {
+    color: $white;
+  }
+
+  .card__author {
+    p {
+      color: $white;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .parent {
+    margin-top: 72px;
+    margin-bottom: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .div1 {
+    background: url("../assets/bg-pattern-quotation.svg") no-repeat right 24px
+        top,
+      $purple;
+  }
+}
