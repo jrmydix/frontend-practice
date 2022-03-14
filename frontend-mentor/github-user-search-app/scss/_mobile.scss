@@ -1,0 +1,267 @@
+body {
+  font-family: "Space Mono", monospace;
+  background-color: $bg;
+  color: $text;
+  margin: 32px 24px;
+}
+
+html.dark {
+  body {
+    background-color: $bg-dark;
+  }
+
+  body,
+  header p,
+  .input--text,
+  a,
+  h1,
+  h2,
+  .user__stats span {
+    color: $white;
+  }
+
+  header p svg,
+  .user__socials--link svg {
+    fill: $white;
+  }
+
+  .input--text,
+  section {
+    background-color: $card-bg-dark;
+  }
+
+  .user__stats {
+    background-color: $bg-dark;
+  }
+
+  .btn--theme {
+    &:hover {
+      color: #90a4d4;
+
+      svg {
+        fill: #90a4d4;
+      }
+    }
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+
+  p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    color: $text;
+    transition: color 0.2s;
+
+    svg {
+      position: relative;
+      top: 0.5em;
+      fill: $text;
+      transition: fill 0.2s;
+    }
+  }
+}
+
+form {
+  margin-bottom: 16px;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  input {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: 0;
+      cursor: unset;
+      color: #222731;
+    }
+  }
+
+  .input--text {
+    width: 100%;
+    background-color: $card-bg;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    padding: 18px 16px 18px 50px;
+    font-family: "Space Mono", monospace;
+    border: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    color: $text;
+  }
+
+  .input--submit {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background: $primary;
+    border-radius: 10px;
+    padding: 12px 18px;
+    border: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    color: $white;
+
+    &:hover {
+      background-color: #60abff;
+    }
+  }
+}
+
+.btn--theme {
+  &:hover {
+    cursor: pointer;
+    color: #222731;
+
+    svg {
+      fill: #222731;
+    }
+  }
+}
+
+section {
+  background-color: $card-bg;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  border-radius: 15px;
+  padding: 32px 24px 48px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  color: #222731;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2b3442;
+}
+
+p,
+a {
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.user {
+  &__infos {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    margin-bottom: 32px;
+
+    img {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        line-height: 19px;
+      }
+    }
+
+    &--username {
+      color: $primary;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__bio {
+    line-height: 25px;
+    margin-bottom: 24px;
+  }
+
+  &__stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 24px;
+    background: #f6f8ff;
+    border-radius: 10px;
+    padding: 18px 16px;
+
+    li {
+      list-style-type: none;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      line-height: 16px;
+
+      span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2b3442;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &--link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      svg {
+        fill: $text;
+      }
+    }
+
+    .location {
+      margin-left: 4px;
+
+      p {
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.unavailable {
+  opacity: 0.5;
+}
