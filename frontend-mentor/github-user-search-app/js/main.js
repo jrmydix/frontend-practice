@@ -25,9 +25,19 @@ form.addEventListener("submit", function (e) {
       const userTwitter = document.querySelector("#user-twitter");
       const userCompany = document.querySelector("#user-company");
 
+      const joinDate = new Date(data.created_at);
+      const formattedDate = joinDate.toLocaleString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+
+      const withHttp = url => !/^https?:\/\//i.test(url) ? `http://${url}` : url;
+      const formattedBlog = withHttp(data.blog);
+
       userImg.src = data.avatar_url;
       userUsername.innerHTML = `@${data.login}`;
-      userJoinDate.innerHTML = `Joined ${data.created_at}`;
+      userJoinDate.innerHTML = `Joined ${formattedDate}`;
       userRepos.innerHTML = data.public_repos;
       userFollowers.innerHTML = data.followers;
       userFollowing.innerHTML = data.following;
@@ -56,7 +66,7 @@ form.addEventListener("submit", function (e) {
 
       if (data.blog) {
         userWebsite.innerHTML = data.blog;
-        userWebsite.href = data.blog;
+        userWebsite.href = formattedBlog;
         userWebsite.parentElement.classList.remove("unavailable");
       } else {
         userWebsite.innerHTML = "Not Available";
