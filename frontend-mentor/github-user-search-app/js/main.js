@@ -1,28 +1,88 @@
 /**
  * API
  */
-// const newAdvice = async () => {
-//   const adviceId = document.querySelector("#advice-id");
-//   const adviceText = document.querySelector("#advice-text");
+const form = document.querySelector("#form__user");
 
-//   const request = await fetch("https://api.adviceslip.com/advice", {
-//     cache: "no-cache",
-//   });
-//   const data = await request.json();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-//   adviceId.innerHTML = data.slip.id;
-//   adviceText.innerHTML = data.slip.advice;
-// };
+  const userInput = document.querySelector("#username").value;
+  const username = userInput.split(" ").join("");
 
-// const adviceBtn = document.querySelector("#advice-dice");
+  fetch("https://api.github.com/users/" + username)
+    .then((result) => result.json())
+    .then((data) => {
+      const userImg = document.querySelector("#user-img");
+      const userName = document.querySelector("#user-name");
+      const userUsername = document.querySelector("#user-username");
+      const userJoinDate = document.querySelector("#user-joindate");
+      const userBio = document.querySelector("#user-bio");
+      const userRepos = document.querySelector("#user-repos");
+      const userFollowers = document.querySelector("#user-followers");
+      const userFollowing = document.querySelector("#user-following");
+      const userLocation = document.querySelector("#user-location");
+      const userWebsite = document.querySelector("#user-website");
+      const userTwitter = document.querySelector("#user-twitter");
+      const userCompany = document.querySelector("#user-company");
 
-// adviceBtn.addEventListener("click", () => {
-//   newAdvice();
-// });
+      userImg.src = data.avatar_url;
+      userUsername.innerHTML = `@${data.login}`;
+      userJoinDate.innerHTML = `Joined ${data.created_at}`;
+      userRepos.innerHTML = data.public_repos;
+      userFollowers.innerHTML = data.followers;
+      userFollowing.innerHTML = data.following;
 
-// window.onload = () => {
-//   newAdvice();
-// };
+      if (data.name) {
+        userName.innerHTML = data.name;
+      } else {
+        userName.innerHTML = data.login;
+      }
+
+      if (data.bio) {
+        userBio.innerHTML = data.bio;
+        userBio.classList.remove("unavailable");
+      } else {
+        userBio.innerHTML = "This profile has no bio.";
+        userBio.classList.add("unavailable");
+      }
+
+      if (data.location) {
+        userLocation.innerHTML = data.location;
+        userLocation.parentElement.classList.remove("unavailable");
+      } else {
+        userLocation.innerHTML = "Not Available";
+        userLocation.parentElement.classList.add("unavailable");
+      }
+
+      if (data.blog) {
+        userWebsite.innerHTML = data.blog;
+        userWebsite.href = data.blog;
+        userWebsite.parentElement.classList.remove("unavailable");
+      } else {
+        userWebsite.innerHTML = "Not Available";
+        userWebsite.parentElement.classList.add("unavailable");
+        userWebsite.removeAttribute("href");
+      }
+
+      if (data.twitter_username) {
+        userTwitter.innerHTML = `@${data.twitter_username}`;
+        userTwitter.href = `https://twitter.com/${data.twitter_username}`;
+        userTwitter.parentElement.classList.remove("unavailable");
+      } else {
+        userTwitter.innerHTML = "Not Available";
+        userTwitter.parentElement.classList.add("unavailable");
+        userTwitter.removeAttribute("href");
+      }
+
+      if (data.company) {
+        userCompany.innerHTML = data.company;
+        userCompany.parentElement.classList.remove("unavailable");
+      } else {
+        userCompany.innerHTML = "Not Available";
+        userCompany.parentElement.classList.add("unavailable");
+      }
+    });
+});
 
 /**
  * Dark mode

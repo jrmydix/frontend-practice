@@ -5,46 +5,6 @@ body {
   margin: 32px 24px;
 }
 
-html.dark {
-  body {
-    background-color: $bg-dark;
-  }
-
-  body,
-  header p,
-  .input--text,
-  a,
-  h1,
-  h2,
-  .user__stats span {
-    color: $white;
-  }
-
-  header p svg,
-  .user__socials--link svg {
-    fill: $white;
-  }
-
-  .input--text,
-  section {
-    background-color: $card-bg-dark;
-  }
-
-  .user__stats {
-    background-color: $bg-dark;
-  }
-
-  .btn--theme {
-    &:hover {
-      color: #90a4d4;
-
-      svg {
-        fill: #90a4d4;
-      }
-    }
-  }
-}
-
 header {
   display: flex;
   align-items: center;
@@ -264,4 +224,49 @@ a {
 
 .unavailable {
   opacity: 0.5;
+
+  a {
+    cursor: unset;
+    text-decoration: none;
+  }
+}
+
+html.dark {
+  body {
+    background-color: $bg-dark;
+  }
+
+  body,
+  header p,
+  .input--text,
+  a,
+  h1,
+  h2,
+  .user__stats span {
+    color: $white;
+  }
+
+  header p svg,
+  .user__socials--link svg {
+    fill: $white;
+  }
+
+  .input--text,
+  section {
+    background-color: $card-bg-dark;
+  }
+
+  .user__stats {
+    background-color: $bg-dark;
+  }
+
+  .btn--theme {
+    &:hover {
+      color: #90a4d4;
+
+      svg {
+        fill: #90a4d4;
+      }
+    }
+  }
 }

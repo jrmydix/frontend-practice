@@ -1,0 +1,45 @@
+@media screen and (min-width: 769px) {
+  body {
+    margin: 144px 24.653vw;
+  }
+
+  section {
+    padding: 48px;
+  }
+
+  #user-joindate {
+    align-self: flex-end;
+    top: 10px;
+    position: absolute;
+  }
+
+  .user {
+    &__infos {
+      align-items: unset;
+
+      &--text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+      }
+    }
+
+    &__bio {
+      margin-left: 154px;
+      position: absolute;
+      transform: translateY(-64px);
+    }
+
+    &__stats {
+      margin-top: 32px;
+      margin-left: 154px;
+      margin-bottom: 37px;
+      width: unset;
+    }
+
+    &__socials {
+      margin-left: 154px;
+    }
+  }
+}
