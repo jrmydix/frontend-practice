@@ -1,0 +1,33 @@
+.input {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 22px;
+    left: 16px;
+  }
+
+  input {
+    width: 100%;
+    background: $very-light-cyan;
+    border-radius: 5px;
+    border: 2px solid $very-light-cyan;
+    outline: 0;
+    height: 48px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    padding: 0 16px 0 37px;
+    color: $dark-cyan;
+    margin-top: 6px;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #26c2ae;
+    }
+  }
+}
+
+input {
+  text-align: right;
+}

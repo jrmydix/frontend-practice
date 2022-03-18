@@ -1,5 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
-@import "./reset";
-@import "./variables";
-@import "./mobile";
-@import "./desktop";
+@import "./abstracts/variables";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/buttons";
+@import "./components/inputs";
+
+@import "./pages/desktop";
+@import "./pages/mobile";
