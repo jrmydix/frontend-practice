@@ -25,6 +25,10 @@
     &:focus {
       border-color: #26c2ae;
     }
+
+    &.invalid {
+      border-color: #e17052;
+    }
   }
 }
 

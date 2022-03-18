@@ -26,6 +26,24 @@
     color: $dark-cyan;
     text-transform: uppercase;
     margin-top: auto;
+
+    &:hover {
+      cursor: default;
+      background-color: #0d686d;
+      color: $dark-cyan;
+    }
+
+    &.active {
+      cursor: pointer;
+      background-color: $light-cyan;
+      color: $dark-cyan;
+
+      &:hover {
+        cursor: pointer;
+        color: $dark-cyan;
+        background-color: #9fe8df;
+      }
+    }
   }
 
   &--green {

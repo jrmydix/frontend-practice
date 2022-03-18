@@ -53,6 +53,23 @@ body {
     border-radius: 15px;
     gap: 24px;
   }
+
+  .label--people-count {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      opacity: 0;
+      color: #e17457;
+      transition: opacity 0.2s;
+    }
+
+    &.active {
+      span {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .tip {
