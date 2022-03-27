@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <main>
+    <div class="star-icon">
+      <img src="assets/icon-star.svg" alt="" aria-hidden="true">
+    </div>
+
+    <h1>How did we do?</h1>
+
+    <p>Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!</p>
+
+    <form id="rating-form">
+      <div class="form__ratings">
+        <div class="form__ratings--rate">
+          <label for="rating-one">1</label>
+          <input type="radio" name="rating" id="rating-one" class="rating" value="1">
+        </div>
+
+        <div class="form__ratings--rate">
+          <label for="rating-two">2</label>
+          <input type="radio" name="rating" id="rating-two" class="rating" value="2">
+        </div>
+
+        <div class="form__ratings--rate">
+          <label for="rating-three">3</label>
+          <input type="radio" name="rating" id="rating-three" class="rating" value="3">
+        </div>
+
+        <div class="form__ratings--rate">
+          <label for="rating-four">4</label>
+          <input type="radio" name="rating" id="rating-four" class="rating" value="4">
+        </div>
+
+        <div class="form__ratings--rate">
+          <label for="rating-five">5</label>
+          <input type="radio" name="rating" id="rating-five" class="rating" value="5">
+        </div>
+      </div>
+
+      <button class="btn--submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

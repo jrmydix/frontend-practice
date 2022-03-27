@@ -1,0 +1,138 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $bg;
+}
+
+main {
+  max-width: 412px;
+  margin: 24px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 15px;
+
+  .star-icon {
+    width: 40px;
+    height: 40px;
+    background-color: $dark-blue;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    color: $white;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $light-grey;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+
+  .form__ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &--rate {
+      width: 42px;
+      height: 42px;
+      background-color: $dark-blue;
+      color: $medium-grey;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &,
+      label {
+        transition: background-color 0.2s, color 0.2s;
+      }
+
+      input {
+        display: none;
+
+        &:hover {
+          cursor: pointer;
+          color: $white;
+          background-color: $orange;
+        }
+      }
+
+      &:hover,
+      label:hover {
+        cursor: pointer;
+        color: $white;
+        background-color: $orange;
+      }
+    }
+  }
+
+  .rating--selected {
+    background-color: $medium-grey;
+    color: $white;
+  }
+
+  .btn--submit {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.8px;
+    color: $white;
+    padding: 12px;
+    width: 100%;
+    background-color: $orange;
+    border-radius: 22.5px;
+    border: 0;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      color: $orange;
+      background-color: $white;
+    }
+  }
+
+  .img--selected {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+
+  .text--center {
+    text-align: center;
+  }
+
+  .rating__selected {
+    color: $orange;
+    background: $dark-blue;
+    border-radius: 22.5px;
+    padding: 5px 12px;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-bottom: 24px;
+  }
+}
