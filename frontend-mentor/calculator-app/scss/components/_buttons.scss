@@ -1,0 +1,29 @@
+button {
+  border: 0;
+  color: $input-default-color;
+  background-color: $input-default-bg;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  box-shadow: $input-shadow $input-default-shadow;
+  border-radius: $border-radius;
+  cursor: pointer;
+  padding: 10px 14px;
+
+  &.action {
+    color: $white;
+    background-color: $input-action-bg;
+    box-shadow: $input-shadow $input-action-shadow;
+    letter-spacing: -0.3px;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  &.equal {
+    color: $white;
+    background-color: $input-equal-bg;
+    box-shadow: $input-shadow $input-equal-shadow;
+  }
+}

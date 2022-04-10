@@ -1,0 +1,51 @@
+html.third {
+  button {
+    color: $input-default-color-third;
+    background-color: $input-default-bg-third;
+    box-shadow: $input-shadow $input-default-shadow-third;
+
+    &.action {
+      color: $white;
+      background-color: $input-action-bg-third;
+      box-shadow: $input-shadow $input-action-shadow-third;
+    }
+
+    &.equal {
+      color: $input-equal-color-third;
+      background-color: $input-equal-bg-third;
+      box-shadow: $input-shadow $input-equal-shadow-third;
+    }
+  }
+
+  .btns__theme {
+    background-color: $calculator-bg-third;
+    border-color: $calculator-bg-third;
+
+    input {
+      background-color: $input-equal-bg-third;
+    }
+  }
+
+  body {
+    background-color: $bg-third;
+  }
+
+  .calculator {
+    &__header {
+      color: $input-default-color-third;
+
+      &--theme {
+        color: $input-default-color-third;
+      }
+    }
+
+    &__result {
+      background: $result-bg-third;
+      color: $input-default-color-third;
+    }
+
+    &__body {
+      background: $calculator-bg-third;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+html.light {
+  button {
+    color: $input-default-color-light;
+    background-color: $input-default-bg-light;
+    box-shadow: $input-shadow $input-default-shadow-light;
+
+    &.action {
+      color: $white;
+      background-color: $input-action-bg-light;
+      box-shadow: $input-shadow $input-action-shadow-light;
+    }
+
+    &.equal {
+      color: $white;
+      background-color: $input-equal-bg-light;
+      box-shadow: $input-shadow $input-equal-shadow-light;
+    }
+  }
+
+  .btns__theme {
+    background-color: $calculator-bg-light;
+    border-color: $calculator-bg-light;
+
+    input {
+      background-color: $input-equal-bg-light;
+    }
+  }
+
+  body {
+    background-color: $bg-light;
+  }
+
+  .calculator {
+    &__header {
+      color: $input-default-color-light;
+
+      &--theme {
+        color: $input-default-color-light;
+      }
+    }
+
+    &__result {
+      background: $result-bg-light;
+      color: $input-default-color-light;
+    }
+
+    &__body {
+      background: $calculator-bg-light;
+    }
+  }
+}
