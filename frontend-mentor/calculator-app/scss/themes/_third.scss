@@ -4,16 +4,28 @@ html.third {
     background-color: $input-default-bg-third;
     box-shadow: $input-shadow $input-default-shadow-third;
 
+    &:hover {
+      background-color: $input-default-bg-hover-third;
+    }
+
     &.action {
       color: $white;
       background-color: $input-action-bg-third;
       box-shadow: $input-shadow $input-action-shadow-third;
+
+      &:hover {
+        background-color: $input-action-bg-hover-third;
+      }
     }
 
     &.equal {
       color: $input-equal-color-third;
       background-color: $input-equal-bg-third;
       box-shadow: $input-shadow $input-equal-shadow-third;
+
+      &:hover {
+        background-color: $input-equal-bg-hover-third;
+      }
     }
   }
 
@@ -23,6 +35,10 @@ html.third {
 
     input {
       background-color: $input-equal-bg-third;
+
+      &:hover {
+        background-color: $input-equal-bg-hover-third;
+      }
     }
   }
 

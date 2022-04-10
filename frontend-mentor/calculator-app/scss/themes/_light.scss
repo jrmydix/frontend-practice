@@ -4,16 +4,28 @@ html.light {
     background-color: $input-default-bg-light;
     box-shadow: $input-shadow $input-default-shadow-light;
 
+    &:hover {
+      background-color: $input-default-bg-hover-light;
+    }
+
     &.action {
       color: $white;
       background-color: $input-action-bg-light;
       box-shadow: $input-shadow $input-action-shadow-light;
+
+      &:hover {
+        background-color: $input-action-bg-hover-light;
+      }
     }
 
     &.equal {
       color: $white;
       background-color: $input-equal-bg-light;
       box-shadow: $input-shadow $input-equal-shadow-light;
+
+      &:hover {
+        background-color: $input-equal-bg-hover-light;
+      }
     }
   }
 
@@ -23,6 +35,10 @@ html.light {
 
     input {
       background-color: $input-equal-bg-light;
+
+      &:hover {
+        background-color: $input-equal-bg-hover-light;
+      }
     }
   }
 

@@ -7,12 +7,15 @@ $calculator-bg: #242d44;
 
 $input-default-color: #434a59;
 $input-default-bg: #eae3dc;
+$input-default-bg-hover: #fffffe;
 $input-default-shadow: #b3a497;
 
 $input-action-bg: #647198;
+$input-action-bg-hover: #a2b2e1;
 $input-action-shadow: #414e73;
 
 $input-equal-bg: #d03f2f;
+$input-equal-bg-hover: #f96b5b;
 $input-equal-shadow: #93261a;
 
 // Theme: light
@@ -22,12 +25,15 @@ $calculator-bg-light: #d2cdcd;
 
 $input-default-color-light: #36362c;
 $input-default-bg-light: #e5e4e1;
+$input-default-bg-hover-light: #ffffff;
 $input-default-shadow-light: #a79e91;
 
 $input-action-bg-light: #378187;
+$input-action-bg-hover-light: #62b5bc;
 $input-action-shadow-light: #1b6066;
 
 $input-equal-bg-light: #c85402;
+$input-equal-bg-hover-light: #ff8a38;
 $input-equal-shadow-light: #873901;
 
 // Theme: third
@@ -37,13 +43,16 @@ $calculator-bg-third: #1e0936;
 
 $input-default-color-third: #ffe53d;
 $input-default-bg-third: #331c4d;
+$input-default-bg-hover-third: #6c34ac;
 $input-default-shadow-third: #881c9e;
 
 $input-action-bg-third: #56077c;
+$input-action-bg-hover-third: #8631af;
 $input-action-shadow-third: #be15f4;
 
 $input-equal-color-third: #1a2327;
 $input-equal-bg-third: #00ded0;
+$input-equal-bg-hover-third: #93fff8;
 $input-equal-shadow-third: #6cf9f1;
 
 // Other global values

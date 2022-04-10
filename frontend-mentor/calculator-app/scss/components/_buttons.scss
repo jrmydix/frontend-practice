@@ -10,6 +10,11 @@ button {
   border-radius: $border-radius;
   cursor: pointer;
   padding: 10px 14px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $input-default-bg-hover;
+  }
 
   &.action {
     color: $white;
@@ -19,11 +24,19 @@ button {
     font-size: 20px;
     line-height: 22px;
     text-transform: uppercase;
+
+    &:hover {
+      background-color: $input-action-bg-hover;
+    }
   }
 
   &.equal {
     color: $white;
     background-color: $input-equal-bg;
     box-shadow: $input-shadow $input-equal-shadow;
+
+    &:hover {
+      background-color: $input-equal-bg-hover;
+    }
   }
 }

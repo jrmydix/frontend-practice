@@ -4,16 +4,28 @@ html.dark {
     background-color: $input-default-bg;
     box-shadow: $input-shadow $input-default-shadow;
 
+    &:hover {
+      background-color: $input-default-bg-hover;
+    }
+
     &.action {
       color: $white;
       background-color: $input-action-bg;
       box-shadow: $input-shadow $input-action-shadow;
+
+      &:hover {
+        background-color: $input-action-bg-hover;
+      }
     }
 
     &.equal {
       color: $white;
       background-color: $input-equal-bg;
       box-shadow: $input-shadow $input-equal-shadow;
+
+      &:hover {
+        background-color: $input-equal-bg-hover;
+      }
     }
   }
 
@@ -23,6 +35,10 @@ html.dark {
 
     input {
       background-color: $input-equal-bg;
+
+      &:hover {
+        background-color: $input-equal-bg-hover;
+      }
     }
   }
 
