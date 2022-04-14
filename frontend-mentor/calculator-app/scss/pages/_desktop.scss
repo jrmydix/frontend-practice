@@ -5,7 +5,8 @@ body {
   min-height: 100vh;
   background-color: $bg;
   padding: 16px 32px;
-  transition: all 0.5s;
+  transition: color 0.5s, background-color 0.5s, background 0.5s,
+    box-shadow 0.5s, border-color 0.5s;
 }
 
 main {

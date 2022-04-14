@@ -22,13 +22,13 @@ const btnThemeLight = document.querySelector("#light");
 const btnThemeThird = document.querySelector("#third");
 
 if (
-  localStorage.theme === "light" ||
+  localStorage.getItem("theme") === "light" ||
   (!("theme" in localStorage) &&
     window.matchMedia("(prefers-color-scheme: light)").matches)
 ) {
   document.documentElement.classList.add("light");
   btnThemeLight.style.opacity = "1";
-} else if (localStorage.theme === "third") {
+} else if (localStorage.getItem("theme") === "third") {
   document.documentElement.classList.add("third");
   btnThemeThird.style.opacity = "1";
 } else {
@@ -37,37 +37,22 @@ if (
 }
 
 btnThemeDark.addEventListener("click", function (e) {
-  if (localStorage.theme == "light") {
-    localStorage.theme = "dark";
-    document.documentElement.classList.remove("light");
-    document.documentElement.classList.add("dark");
-  } else if (localStorage.theme == "third") {
-    localStorage.theme = "dark";
-    document.documentElement.classList.remove("third");
-    document.documentElement.classList.add("dark");
-  }
+  localStorage.setItem("theme", "dark");
+  document.documentElement.classList.remove("light");
+  document.documentElement.classList.remove("third");
+  document.documentElement.classList.add("dark");
 });
 
 btnThemeLight.addEventListener("click", function (e) {
-  if (localStorage.theme == "dark") {
-    localStorage.theme = "light";
-    document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("light");
-  } else if (localStorage.theme == "third") {
-    localStorage.theme = "light";
-    document.documentElement.classList.remove("third");
-    document.documentElement.classList.add("light");
-  }
+  localStorage.setItem("theme", "light");
+  document.documentElement.classList.remove("dark");
+  document.documentElement.classList.remove("third");
+  document.documentElement.classList.add("light");
 });
 
 btnThemeThird.addEventListener("click", function (e) {
-  if (localStorage.theme == "light") {
-    localStorage.theme = "third";
-    document.documentElement.classList.remove("light");
-    document.documentElement.classList.add("third");
-  } else if (localStorage.theme == "dark") {
-    localStorage.theme = "third";
-    document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("third");
-  }
+  localStorage.setItem("theme", "third");
+  document.documentElement.classList.remove("light");
+  document.documentElement.classList.remove("dark");
+  document.documentElement.classList.add("third");
 });
