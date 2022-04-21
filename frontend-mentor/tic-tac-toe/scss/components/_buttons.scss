@@ -1,0 +1,18 @@
+.btn {
+  &__restart {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: $silver;
+    box-shadow: inset 0px -4px 0px #6b8997;
+    border-radius: 5px;
+
+    img {
+      width: 15.38px;
+      height: 15.38px;
+    }
+  }
+}
