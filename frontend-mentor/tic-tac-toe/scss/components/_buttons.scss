@@ -1,3 +1,12 @@
+.cell {
+  width: 96px;
+  height: 96px;
+  background: #1f3641;
+  box-shadow: inset 0px -8px 0px #10212a;
+  border-radius: 10px;
+  border: 0;
+}
+
 .btn {
   &__restart {
     justify-self: flex-end;
@@ -13,6 +22,62 @@
     img {
       width: 15.38px;
       height: 15.38px;
+    }
+  }
+
+  &__quit,
+  &__next-round,
+  &__restart-game {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #1a2a33;
+    padding: 16px;
+  }
+
+  &__quit {
+    background: #a8bfc9;
+    box-shadow: inset 0px -4px 0px #6b8997;
+  }
+
+  &__next-round,
+  &__restart-game {
+    background: #f2b137;
+    box-shadow: inset 0px -4px 0px #cc8b13;
+  }
+
+  &__new-game {
+    &--cpu,
+    &--pvp {
+      display: inline-block;
+      width: 100%;
+      border-radius: 15px;
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 1px;
+      color: #1a2a33;
+      padding: 14px 16px 22px;
+    }
+
+    &--cpu {
+      background: #f2b137;
+      box-shadow: inset 0px -8px 0px #cc8b13;
+      margin-bottom: 16px;
+    }
+
+    &--pvp {
+      background: #31c3bd;
+      box-shadow: inset 0px -8px 0px #118c87;
     }
   }
 }

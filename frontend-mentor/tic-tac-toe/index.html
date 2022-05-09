@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
-  <title>Frontend Mentor | Tic Tac Toe</title>
+  <title>Tic Tac Toe</title>
 </head>
 
 <body>
@@ -14,32 +14,81 @@
     <img src="assets/logo.svg" alt="Tic Tac Toe">
 
     <div class="turn__p">
-      <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#31C3BD" fill-rule="evenodd"/></svg>
+      <img src="assets/icon-x.svg" alt="Player turn indicator">
       <p>turn</p>
     </div>
 
-    <div class="btn__restart">
+    <div class="btn__restart" onclick="restartGame()">
       <img src="assets/icon-restart.svg" alt="Restart game">
     </div>
   </header>
 
   <main>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
+    <div class="lobby">
+      <img src="assets/logo.svg" alt="Tic Tac Toe">
+
+      <div class="lobby__symbol">
+        <p class="lobby__symbol--title">pick player 1's mark</p>
+
+        <div class="lobby__symbol--choice">
+          <button onclick="selectSym('X')" class="btnX selected">
+            <img src="./assets/icon-x.svg" alt="Play as symbol X">
+          </button>
+          <button onclick="selectSym('O')" class="btnO">
+            <img src="./assets/icon-o.svg" alt="Play as symbol O">
+          </button>
+        </div>
+
+        <p class="lobby__symbol--tip">remember: x goes first</p>
+      </div>
+
+      <div class="lobby__gamemode">
+        <p class="btn__new-game--cpu" onclick="closeLobby()">new game (vs cpu)</p>
+        <p class="btn__new-game--pvp">new game (vs player)</p>
+      </div>
+    </div>
+
+    <button class="cell" id="0"></button>
+    <button class="cell" id="1"><img src="" alt=""></button>
+    <button class="cell" id="2"><img src="" alt=""></button>
+    <button class="cell" id="3"><img src="" alt=""></button>
+    <button class="cell" id="4"><img src="" alt=""></button>
+    <button class="cell" id="5"><img src="" alt=""></button>
+    <button class="cell" id="6"><img src="" alt=""></button>
+    <button class="cell" id="7"><img src="" alt=""></button>
+    <button class="cell" id="8"><img src="" alt=""></button>
+
+    <div class="modal__infos">
+      <div class="modal__infos--content">
+        <p class="modal__infos--player"></p>
+        <p class="modal__infos--winner">LOOOOSER LLLLLL</p>
+
+        <div class="modal__actions">
+          <p class="btn__quit" onclick="quit()">quit</p>
+          <p class="btn__next-round">next round</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__restart">
+      <div class="modal__restart--content">
+        <p class="modal__restart--title">restart game?</p>
+
+        <div class="modal__actions">
+          <p class="btn__quit" onclick="closeModal()">no, cancel</p>
+          <p class="btn__restart-game" onclick="startGame()">yes, restart</p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>(p2) <span>x</span></p>
-    <p>TIES <span>x</span></p>
-    <p>(p1) <span>x</span></p>
+    <p>(p2) <span>0</span></p>
+    <p>TIES <span>0</span></p>
+    <p>(p1) <span>0</span></p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
