@@ -25,26 +25,28 @@
 
   <main>
     <div class="lobby">
-      <img src="assets/logo.svg" alt="Tic Tac Toe">
+      <div class="lobby__content">
+        <img src="assets/logo.svg" alt="Tic Tac Toe">
 
-      <div class="lobby__symbol">
-        <p class="lobby__symbol--title">pick player 1's mark</p>
+        <div class="lobby__symbol">
+          <p class="lobby__symbol--title">pick player 1's mark</p>
 
-        <div class="lobby__symbol--choice">
-          <button onclick="selectSym('X')" class="btnX selected">
-            <img src="./assets/icon-x.svg" alt="Play as symbol X">
-          </button>
-          <button onclick="selectSym('O')" class="btnO">
-            <img src="./assets/icon-o.svg" alt="Play as symbol O">
-          </button>
+          <div class="lobby__symbol--choice">
+            <button onclick="selectSym('X')" class="btnX selected">
+              <img src="./assets/icon-x.svg" alt="Play as symbol X">
+            </button>
+            <button onclick="selectSym('O')" class="btnO">
+              <img src="./assets/icon-o.svg" alt="Play as symbol O">
+            </button>
+          </div>
+
+          <p class="lobby__symbol--tip">remember: x goes first</p>
         </div>
 
-        <p class="lobby__symbol--tip">remember: x goes first</p>
-      </div>
-
-      <div class="lobby__gamemode">
-        <p class="btn__new-game--cpu" onclick="closeLobby()">new game (vs cpu)</p>
-        <p class="btn__new-game--pvp">new game (vs player)</p>
+        <div class="lobby__gamemode">
+          <p class="btn__new-game--cpu" onclick="closeLobby()">new game (vs cpu)</p>
+          <p class="btn__new-game--pvp">new game (vs player)</p>
+        </div>
       </div>
     </div>
 
@@ -83,9 +85,9 @@
   </main>
 
   <footer>
-    <p>(p2) <span>0</span></p>
-    <p>TIES <span>0</span></p>
-    <p>(p1) <span>0</span></p>
+    <p class="p2Score">(p2) <span>0</span></p>
+    <p class="tiesScore">TIES <span>0</span></p>
+    <p class="p1Score">(p1) <span>0</span></p>
   </footer>
 
   <script src="js/main.js"></script>

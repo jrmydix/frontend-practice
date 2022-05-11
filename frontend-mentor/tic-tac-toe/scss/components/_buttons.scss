@@ -1,8 +1,8 @@
 .cell {
   width: 96px;
   height: 96px;
-  background: #1f3641;
-  box-shadow: inset 0px -8px 0px #10212a;
+  background: $semi-dark-navy;
+  box-shadow: inset 0px -8px 0px $navy-shadow;
   border-radius: 10px;
   border: 0;
 }
@@ -16,8 +16,14 @@
     width: 40px;
     height: 40px;
     background: $silver;
-    box-shadow: inset 0px -4px 0px #6b8997;
+    box-shadow: inset 0px -4px 0px $silver-shadow;
     border-radius: 5px;
+    transition: background $anim-delay;
+
+    &:hover {
+      cursor: pointer;
+      background: $silver-hover;
+    }
 
     img {
       width: 15.38px;
@@ -37,19 +43,32 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 10px;
-    color: #1a2a33;
+    color: $dark-navy;
     padding: 16px;
+    transition: background $anim-delay;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__quit {
-    background: #a8bfc9;
-    box-shadow: inset 0px -4px 0px #6b8997;
+    background: $silver;
+    box-shadow: inset 0px -4px 0px $silver-shadow;
+
+    &:hover {
+      background: $silver-hover;
+    }
   }
 
   &__next-round,
   &__restart-game {
-    background: #f2b137;
-    box-shadow: inset 0px -4px 0px #cc8b13;
+    background: $light-yellow;
+    box-shadow: inset 0px -4px 0px $light-yellow-shadow;
+
+    &:hover {
+      background: $light-yellow-hover;
+    }
   }
 
   &__new-game {
@@ -65,19 +84,32 @@
       line-height: 20px;
       text-align: center;
       letter-spacing: 1px;
-      color: #1a2a33;
+      color: $dark-navy;
       padding: 14px 16px 22px;
+      transition: background $anim-delay;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &--cpu {
-      background: #f2b137;
-      box-shadow: inset 0px -8px 0px #cc8b13;
+      background: $light-yellow;
+      box-shadow: inset 0px -8px 0px $light-yellow-shadow;
       margin-bottom: 16px;
+
+      &:hover {
+        background: $light-yellow-hover;
+      }
     }
 
     &--pvp {
-      background: #31c3bd;
-      box-shadow: inset 0px -8px 0px #118c87;
+      background: $light-blue;
+      box-shadow: inset 0px -8px 0px $light-blue-shadow;
+
+      &:hover {
+        background: $light-blue-hover;
+      }
     }
   }
 }

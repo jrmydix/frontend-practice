@@ -14,6 +14,14 @@ const aiDelay = 400;
 const delay = 600;
 const turnIndicatorImg = document.querySelector(".turn__p img");
 
+const p1ScoreContainer = document.querySelector(".p1Score span");
+const p2ScoreContainer = document.querySelector(".p2Score span");
+const tiesScoreContainer = document.querySelector(".tiesScore span");
+
+let p1Score = 0;
+let p2Score = 0;
+let tiesScore = 0;
+
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -26,6 +34,7 @@ const winCombos = [
 ];
 
 const cells = document.querySelectorAll(".cell");
+updateScore();
 startGame();
 
 function selectSym(sym) {
@@ -41,6 +50,12 @@ function selectSym(sym) {
 
   huPlayer = sym === "X" ? huX : huO;
   aiPlayer = sym === "O" ? aiX : aiO;
+}
+
+function updateScore() {
+  p1ScoreContainer.innerText = p1Score;
+  p2ScoreContainer.innerText = p2Score;
+  tiesScoreContainer.innerText = tiesScore;
 }
 
 function closeLobby() {
@@ -112,7 +127,7 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
-      gameWon.player === huPlayer ? "blue" : "red";
+      gameWon.player === huPlayer ? "#31C3BD" : "#F2B137";
   }
   for (let i = 0; i < cells.length; i++) {
     cells[i].removeEventListener("click", turnClick, false);
@@ -120,6 +135,8 @@ function gameOver(gameWon) {
   declareWinner(
     gameWon.player === huPlayer ? "You won!" : "Oh no, you lost..."
   );
+  gameWon.player === huPlayer ? p2Score++ : p1Score++;
+  updateScore();
 }
 
 function declareWinner(who) {
@@ -158,6 +175,8 @@ function checkTie() {
       cell.style.backgroundColor = "green";
       cell.removeEventListener("click", turnClick, false);
     }
+    tiesScore++;
+    updateScore();
     declareTie("Round tied");
     return true;
   }

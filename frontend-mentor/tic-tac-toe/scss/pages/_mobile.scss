@@ -18,6 +18,7 @@ footer {
 }
 
 header {
+  width: 100%;
   margin-bottom: 64px;
   align-items: center;
 
@@ -29,7 +30,7 @@ header {
     width: 96px;
     height: 40px;
     background: $semi-dark-navy;
-    box-shadow: inset 0px -4px 0px #10212a;
+    box-shadow: inset 0px -4px 0px $navy-shadow;
     border-radius: 5px;
     gap: 9px;
 
@@ -58,6 +59,7 @@ main {
 }
 
 footer {
+  width: 100%;
   gap: 20px;
 
   p {

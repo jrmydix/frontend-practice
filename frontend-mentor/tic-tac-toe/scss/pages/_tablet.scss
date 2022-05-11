@@ -1,0 +1,104 @@
+@media (min-width: 768px) {
+  .cell {
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+  }
+
+  header {
+    margin-bottom: 20px;
+
+    .turn__p {
+      width: 140px;
+      height: 52px;
+      border-radius: 10px;
+      gap: 12px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .btn {
+    &__restart {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__new-game {
+      &--cpu {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  footer {
+    p {
+      border-radius: 15px;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.875px;
+      width: 140px;
+      height: 72px;
+
+      span {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+
+  .lobby {
+    img {
+      margin-bottom: 40px;
+    }
+
+    &__symbol {
+      margin-bottom: 40px;
+    }
+  }
+
+  .modal {
+    &__infos,
+    &__restart {
+      &--content {
+        min-height: 270px;
+      }
+
+      &--title {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 2.5px;
+        margin-bottom: 32px;
+      }
+
+      &--player {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+      }
+
+      &--winner {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 2.5px;
+      }
+    }
+  }
+}

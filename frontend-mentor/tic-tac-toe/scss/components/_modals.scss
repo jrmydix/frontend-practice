@@ -15,17 +15,20 @@
     background-color: rgba(0, 0, 0, 0.5);
 
     &--content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 220px;
       width: 100vw;
       padding: 48px 32px;
-      color: #a8bfc9;
-      background: #1f3641;
-      border-radius: 4px;
+      color: $silver;
+      background: $semi-dark-navy;
       text-align: center;
 
       p {
         font-family: "Outfit";
         font-style: normal;
-        margin-bottom: 16px;
         text-transform: uppercase;
       }
     }
@@ -36,7 +39,8 @@
       line-height: 30px;
       text-align: center;
       letter-spacing: 1.5px;
-      color: #a8bfc9;
+      color: $silver;
+      margin-bottom: 24px;
     }
 
     &--player {
@@ -46,6 +50,7 @@
       line-height: 18px;
       text-transform: uppercase;
       letter-spacing: 0.875px;
+      margin-bottom: 16px;
     }
 
     &--winner {
@@ -53,7 +58,8 @@
       font-size: 24px;
       line-height: 30px;
       letter-spacing: 1.5px;
-      color: #f2b137;
+      color: $light-yellow;
+      margin-bottom: 24px;
     }
   }
 
