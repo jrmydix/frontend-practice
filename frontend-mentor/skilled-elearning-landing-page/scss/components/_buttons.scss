@@ -1,0 +1,50 @@
+.btn {
+  &--start {
+    text-decoration: none;
+    padding: 12px 24px;
+    text-transform: capitalize;
+    border-radius: 28px;
+    background: $dark-purple;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: $white;
+    outline: 0;
+    border: 0;
+    transition: background 0.2s;
+
+    &:hover {
+      background: $purple;
+    }
+  }
+
+  &--gradient-pink {
+    transition: background 0.2s;
+    padding: 16px 38px;
+    background: $gradient-pink;
+
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+    }
+  }
+
+  &--gradient-purple {
+    transition: background 0.2s;
+    background: $gradient-purple;
+
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+    }
+  }
+}

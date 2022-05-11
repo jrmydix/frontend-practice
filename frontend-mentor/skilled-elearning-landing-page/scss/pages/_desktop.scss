@@ -1,0 +1,88 @@
+@media (min-width: 1024px) {
+  .main__grid {
+    margin-bottom: 226px;
+    padding: 0 165px;
+  }
+
+  header {
+    padding: 24px 165px;
+  }
+
+  footer {
+    padding: 32px 165px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 71px;
+    margin-bottom: 29px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 64px 32px;
+    max-width: 339px;
+    border-radius: 15px;
+    max-width: 350px;
+  }
+
+  .block {
+    &__gradient {
+      padding: 0 165px 140px;
+    }
+
+    &__title {
+      max-width: 457px;
+      margin-top: 100px;
+    }
+
+    &__stats {
+      position: relative;
+      padding: 0;
+      margin: 0;
+
+      img {
+        position: absolute;
+        width: 991px;
+        height: 936px;
+        left: -50px;
+        top: -325px;
+        display: unset;
+        margin: unset;
+        z-index: -1;
+
+        &:nth-child(3) {
+          display: unset;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+
+    &__activities {
+      column-gap: 30px;
+      row-gap: 80px;
+    }
+
+    &__activity {
+      padding: 56px 28px 32px;
+      border-radius: 15px;
+      max-width: 350px;
+
+      h3 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

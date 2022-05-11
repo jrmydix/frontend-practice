@@ -1,0 +1,55 @@
+header,
+.main__grid {
+  padding: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin-bottom: 38px;
+}
+
+.logo {
+  width: 89px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+  color: $dark-purple;
+  margin-bottom: 26px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $grayish-purple;
+}
+
+h2 {
+  padding: 24px 28px 32px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+  color: $white;
+  background: $gradient-pink;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: $dark-purple;
+  padding: 36px 16px;
+}

@@ -1,0 +1,70 @@
+.block {
+  &__title p {
+    margin-bottom: 32px;
+  }
+
+  &__gradient {
+    background: $gradient-white;
+    padding: 16px;
+  }
+
+  &__stats {
+    padding: 0 8px;
+    margin-top: 46px;
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  &__activities {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__activity {
+    position: relative;
+    padding: 56px 28px 32px;
+    background: $white;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    border-radius: 10px;
+
+    img {
+      position: absolute;
+      top: -28px;
+      left: 28px;
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 25px;
+      color: $dark-purple;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      color: $pink;
+      text-decoration: none;
+    }
+  }
+}
