@@ -1,0 +1,25 @@
+@media (min-width: 769px) {
+  body {
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+  }
+
+  main {
+    padding: 16px 9vw;
+  }
+
+  .weather {
+    &__location {
+      margin-bottom: 0;
+    }
+
+    &__days,
+    &__highlights {
+      justify-content: space-between;
+    }
+
+    &__highlight {
+      width: calc(50% - 16px);
+    }
+  }
+}
