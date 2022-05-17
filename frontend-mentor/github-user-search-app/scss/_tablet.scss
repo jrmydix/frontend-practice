@@ -1,8 +1,4 @@
 @media screen and (min-width: 670px) {
-  body {
-    margin: 140px 96px;
-  }
-
   h2 {
     font-size: 26px;
     line-height: 39px;
@@ -30,7 +26,7 @@
 
     .input--text {
       font-size: 18px;
-      padding: 22px 22px 22px 80px;
+      padding: 22px 150px 22px 80px;
     }
 
     .input--submit {
@@ -40,6 +36,11 @@
       line-height: 24px;
       padding: 12px 24px;
     }
+  }
+
+  .form__error {
+    top: 35%;
+    right:150px;
   }
 
   .user {

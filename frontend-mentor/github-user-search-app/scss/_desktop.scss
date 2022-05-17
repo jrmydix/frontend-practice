@@ -1,10 +1,18 @@
 @media screen and (min-width: 1290px) {
   body {
-    margin: 144px 24.653vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
   section {
     padding: 48px;
+  }
+
+  header, main {
+    max-width: 730px;
   }
 
   #user-joindate {
