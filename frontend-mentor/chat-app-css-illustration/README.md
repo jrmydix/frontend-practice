@@ -18,17 +18,16 @@ This is my solution to the [Chat app CSS illustration challenge on Frontend Ment
 Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
-- **Bonus**: See the chat interface animate on the initial load
 
 ### Screenshots
 
 - Desktop
 
-  ![](screenshots/desktop-design-made.png)
+  ![](screenshots/desktop-design.png)
 
 - Mobile
 
-  ![](screenshots/mobile-design-made.png)
+  ![](screenshots/mobile-design.png)
 
 ### Built with
 
